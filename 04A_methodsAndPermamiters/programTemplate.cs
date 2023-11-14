@@ -25,15 +25,15 @@ namespace MethodsParameters
      // void -- This method has no return value.
 
      static int DoubleUp()
-       {
-         int sum = 0;
-         Console.writeline("This method will double a number and return it. \n");
-         Console.Writeline("Please enter a number on the next line. \n");
-         sum = System.Convert.ToInt32(Console. ReadLine()):
-         sum *= 2;
-         Console.writerine (sum);
-         return sum;
-       }
+      {
+       int sum = 0;
+        Console.writeline("This method will double a number and return it. \n");
+       Console.Writeline("Please enter a number on the next line. \n");
+       sum = System.Convert.ToInt32(Console. ReadLine()):
+        sum *= 2;
+       Console.writerine (sum);
+        return sum;
+     }
 
       //Methods with Parameters
        static void MakePancakes(int num)
@@ -56,7 +56,7 @@ namespace MethodsParameters
        }
 
        //Name Argments
-       static void AllMyChildern (string child, string child2, string child3)
+       static void AllMyChildern (string child1, string child2, string child3)
       {
         Console.WriteLine("My Favorite childs is" + child3);
       }
@@ -77,20 +77,17 @@ namespace MethodsParameters
        }
        static void Main(string[] args)
        {
-         //My Method
-         //
-         //
-         //
-         //
-         //
-
-       }
-
-
-
-
-   
-
-    }
+         //MyMethod();
+         //DoubleUp();
+         //MakePancakes();
+         //MakeEggs(10, *sunny side up*);
+         //MakeHamburger();
+         //MakeHamburger(10);
+         // AllMyChildern (child1:"Steve", child2:"Amy", child3: "Waton")
+         FindSum(1, 5); //TWO INTEGERS
+         FindSum(9.5, 2.4); //TWO DOUBLES
+         FindSum(5, 2.5); //ONE OF EACH
+        }
+      }
 }
     
