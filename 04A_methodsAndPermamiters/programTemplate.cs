@@ -19,7 +19,8 @@ namespace MethodsParameters
      static void MyMethod()
      {
         Console WriteLine("I like mine with lettuce and tomatoes, Heinz 57, and french fried potatoes. /n*):
-     }
+      
+      }
      // static -- This method belongs to the current class, it is NOT an object.
      // void -- This method has no return value.
 
@@ -54,6 +55,41 @@ namespace MethodsParameters
          Console.Mriteline("I am going to cook " + num + "hamburgers,\n");
        }
 
+       //Name Argments
+       static void AllMyChildern (string child, string child2, string child3)
+      {
+        Console.WriteLine("My Favorite childs is" + child3);
+      }
+       //METHOD OVERLOADING
+       //Find sum of int
+       static int FindSum (int x, int y)
+       {
+          int sum = x + y
+          Console.WriteLine("Sum:" + sum);
+          return sum;
+       }
+       //Find sum of double
+       static int FindSum (double x,double y)
+       {
+          double sum = x + y 
+          Console.WriteLine("Sum:" + sum);
+          return sum;
+       }
+       static void Main(string[] args)
+       {
+         //My Method
+         //
+         //
+         //
+         //
+         //
+
+       }
+
+
+
+
+   
 
     }
 }
