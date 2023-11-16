@@ -30,5 +30,37 @@ namespace rockPaperScissors
         {
             Console.WriteLine("Rock, Paper, Sciccors ... SHOOT!\n", player.playername, player.Score, computerscore);
         } 
+          public static int ComputerRPS()
+        {
+            Random c = new Random();
+            c_rps = c.Next(1, 4);
+
+            return c_rps;
+        }
+
+        public static void Check(int c, Player player)
+        {
+            c = ComputerRPS();
+             switch(c)
+            {
+                case 1:
+
+                    if (p_rps == "R")
+                    {
+                        Console.WriteLine("Tie");
+                    }
+                    else if (p_rps == "P")
+                    {
+                        Console.WriteLine("Computer chose rock.\nPaper beats rock. {0} wins this round.", player.playername);
+                        player.Score++;
+                    }
+                    else if (p_rps == "S")
+                    {
+                      Console.WriteLine("Computer chose rock.\nRock beats scissors."\n);
+                    }
+            }
+         }
+
 }
+         
     
