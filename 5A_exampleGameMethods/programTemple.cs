@@ -100,14 +100,28 @@ namespace rockPaperScissors
 
                     break;
 
-                case 4:
-                 
-               
+                    public static bool WhoWins(Player player)
+                 {
+                  if (player.Score == 5)
+                 {
+                   Console.WriteLine("\n{0} wins the game.\n",player.playername);
+                   return true;
+                 }
+                 if (computerscore == 5)
+                 {
+                   Console.WriteLine("\nComputer wins the game.\n");
+                   return true;
+                  }
 
-                    break;
-            }
-        }   
-}
+                   return false;
+                 }
+              }
+
+                
+                 
+            }  
+}   
+
                    
          
      
