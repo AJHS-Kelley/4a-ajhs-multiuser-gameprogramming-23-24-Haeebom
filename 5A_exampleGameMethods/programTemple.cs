@@ -78,9 +78,36 @@ namespace rockPaperScissors
                         Console.WriteLine("Computer chose paper.\nScissors beats rock. {0} wins this round.", player.playername);
                         player.Score++;
                     }
+
+                    break;
+
+                case 3:
+
+                    if (p_rps == "R")
+                    {
+                        Console.WriteLine("Computer chose scissors.\nRock beats scissors. {0} wins this round.", player.playername);
+                        player.Score++;
+                    }
+                    else if (p_rps == "P")
+                    {
+                        Console.WriteLine("Computer chose scissors.\nScissors beats paper. Computer wins this round.");
+                        computerscore++;
+                    }
+                    else if (p_rps == "S")
+                    {
+                        Console.WriteLine("Tie");
+                    }
+
+                    break;
+
+                case 4:
+                 
+               
+
+                    break;
             }
-         }
+        }   
 }
                    
          
-    
+     
