@@ -20,5 +20,15 @@ namespace rockPaperScissors
         private static int c_rps;
         private static int computerscore;
     }
+   public static void Initialize(Player player)
+        {
+            player.Score = 0;
+            computerscore = 0;          
+        }
+
+        public static void Board(Player player)
+        {
+            Console.WriteLine("Rock, Paper, Sciccors ... SHOOT!\n", player.playername, player.Score, computerscore);
+        } 
 }
     
