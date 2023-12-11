@@ -5,12 +5,12 @@ using System;
 // ask the player what they want to do.
 // collect users response in a variable
 
-namespace lanuagePicker
+namespace Color picker
 {
     class person
     {
        
-      static string language(s
+      static string language()
        {
          Console.WriteLine("Would you like to learn a language?\n");
          string answer = Console.ReadLine().ToLower();
