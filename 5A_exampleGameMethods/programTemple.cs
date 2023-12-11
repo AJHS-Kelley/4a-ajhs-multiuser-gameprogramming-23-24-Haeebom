@@ -1,191 +1,89 @@
 // Naomi Williams, Example Game Methods, v0.1
 using System;
+// Time to learn language
+// Do you want to get paid from learning this language
+// ask the player what they want to do.
+// collect users response in a variable
 
-namespace rockpaperscissors
+namespace lanuagePicker
 {
-    class Player
+    class person
     {
-        public string playername;
-        private int playerscore;
+       
+      static string language(s
+       {
+         Console.WriteLine("Would you like to learn a language?\n");
+         string answer = Console.ReadLine().ToLower();
+         if (answer == "yes") 
+         {
+          Console.WriteLine(" Would youlike to learn Spanish, Russian, Japanese, or Chinese\n");
+          answer = Console.ReadLine().ToLower();
+          if (answer == "spanish")
+          {
+            Console.WriteLine(" You've selected Spanish!\n");
+          }else if (answer == "japanese")
+          {
+           Console.WriteLine("You've selected Japanese \n"); 
 
-        public int Score
+          }else if (answer == "russian")
+         {
+          Console.WriteLine("You've selected Russian\n");
+         
+         }else if (answer == "chinese")
+         {
+         Console.WriteLine("You've selected Chinese\n");
+         }
+
+         } else if (answer == "no")
+         {
+          Console.WriteLine("No language for you !!\n");
+         }
+         return answer;
+       } 
+
+       static void spanish()
+       {
+         Console.WriteLine("You can learn from duolingo!https://www.duolingo.com/\n");
+      
+       }
+       static void japanese()
+       {
+        Console.WriteLine("You can learn from japanese pod 101! https://www.japanesepod101.com/free-lifetime-account?src=gc_learn_search_brandedsearch_japanese-brand_usa_c__392829551250_&gad_source=1&gclid=EAIaIQobChMIuO\n");        
+       }
+       static void russian()
+       {
+        Console.WriteLine("You can learn from Russian for free!https://www.russianforfree.com/lessons-russian-language-01.php\n");        
+               }
+       static void chinese()
+       {
+        Console.WriteLine("You can learn from Mandarin blueprint!https://www.mandarinblueprint.com/blog/best-way-to-learn-mandarin/\n");        
+        
+       }
+         static void Main(string[] args)  
         {
-            get { return playerscore; }
-            set { playerscore = value; }
-        }
-    }
-    class RockPaperScissors
-    {
-        public static string p_rps;
-        private static int c_rps;
-        private static int computerscore;
+        
+         
+         int time = 0;
+         bool pay = false;
+         string option = language();      
+         if(option == "spanish")
+         {
+          spanish();
+         } else if (option == "japanese")
+         {
+          japanese();
+         }else if (option == "russian")
+         {
+          russian();
+         }else if (option == "chinese")
+         {
+          chinese();
+         }
+        
 
-        public static void Initialize(Player player)
-        {
-            player.Score = 0;
-            computerscore = 0;          
-        }
+       }  
 
-        public static void Board(Player player)
-        {
-            Console.WriteLine("Rock, Paper, Sciccors ... SHOOT!\n", player.playername, player.Score, computerscore);
-        }
-
-        public static int ComputerRPS()
-        {
-            Random c = new Random();
-            c_rps = c.Next(1, 4);
-
-            return c_rps;
-        }
-
-        public static void Check(int c, Player player)
-        {
-            c = ComputerRPS();
-
-            switch(c)
-            {
-                case 1:
-
-                    if (p_rps == "R")
-                    {
-                        Console.WriteLine("Tie");
-                    }
-                    else if (p_rps == "P")
-                    {
-                        Console.WriteLine("Computer chose rock.\nPaper beats rock. {0} wins this round.", player.playername);
-                        player.Score++;
-                    }
-                    else if (p_rps == "S")
-                    {
-                        Console.WriteLine("Computer chose rock.\nRock beats scissors. Computer wins this round.");
-                        computerscore++;
-                    }
-
-                    break;
-
-                case 2:
-
-                    if (p_rps == "R")
-                    {
-                        Console.WriteLine("Computer chose paper.\nPaper beats rock. Computer wins this round.");
-                        computerscore++;
-                    }
-                    else if (p_rps == "P")
-                    {
-                        Console.WriteLine("Tie");
-                    }
-                    else if (p_rps == "S")
-                    {
-                        Console.WriteLine("Computer chose paper.\nScissors beats rock. {0} wins this round.", player.playername);
-                        player.Score++;
-                    }
-
-                    break;
-
-                case 3:
-
-                    if (p_rps == "R")
-                    {
-                        Console.WriteLine("Computer chose scissors.\nRock beats scissors. {0} wins this round.", player.playername);
-                        player.Score++;
-                    }
-                    else if (p_rps == "P")
-                    {
-                        Console.WriteLine("Computer chose scissors.\nScissors beats paper. Computer wins this round.");
-                        computerscore++;
-                    }
-                    else if (p_rps == "S")
-                    {
-                        Console.WriteLine("Tie");
-                    }
-
-                    break;
-            }
-        }
-
-        public static bool WhoWins(Player player)
-        {
-            if (player.Score == 5)
-            {
-                Console.WriteLine("\n{0} wins the game.\n",player.playername);
-                return true;
-            }
-            if (computerscore == 5)
-            {
-                Console.WriteLine("\nComputer wins the game.\n");
-                return true;
-            }
-
-            return false;
-        }
-    }
-    class Program
-    {
-        public static bool play;
-        public static string startgame;
-
-        static void StartGameOrNot()
-        {
-            do
-            {                
-                startgame = Console.ReadLine().ToUpper();
-                startgame.ToUpper();
-
-                if (startgame == "Y")
-                {
-                    play = true;
-                }
-                else if (startgame == "N")
-                {
-                    Console.WriteLine("\nOkay then, goodbye");
-                    Environment.Exit(0);
-                }
-                else
-                {
-                    Console.Write("\nInvalid. Do you want to start the game? [Y/N] --> ");
-                }
-            } while (startgame != "Y" && startgame != "N");
-        }
-        static void Main(string[] args)
-        {
-            Console.Write("Do you want to start the game? [Y/N] --> ");
-            StartGameOrNot();
-
-            Player player1 = new Player();
-
-            Console.Clear();
-            Console.Write("\n\n\tWhat is your name? --> ");
-            player1.playername = Console.ReadLine();
-
-            Console.Clear();
-            RockPaperScissors.Initialize(player1);
-
-            while (play)
-            {                              
-                RockPaperScissors.Board(player1);
-
-                do
-                {
-                    Console.Write("Rock, paper, scissors? [R/P/S] --> ");
-                    RockPaperScissors.p_rps = Console.ReadLine().ToUpper();                  
-                } while (RockPaperScissors.p_rps == "R" && RockPaperScissors.p_rps == "P" && RockPaperScissors.p_rps == "S");
-
-                int c = RockPaperScissors.ComputerRPS();
-
-                Console.Clear();
-
-                RockPaperScissors.Check(c, player1);
-
-                if(RockPaperScissors.WhoWins(player1))
-                {
-                    Console.Write("Replay? --> ");
-                    StartGameOrNot();
-                    RockPaperScissors.Initialize(player1);
-                    Console.Clear();
-                }
-            }
-        }
     }
 }
+
 // code review by: Ashley
