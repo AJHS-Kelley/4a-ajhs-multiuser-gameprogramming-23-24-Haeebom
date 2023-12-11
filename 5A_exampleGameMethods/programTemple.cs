@@ -5,7 +5,7 @@ using System;
 // ask the player what they want to do.
 // collect users response in a variable
 
-namespace Color picker
+namespace language picker
 {
     class person
     {
@@ -16,7 +16,7 @@ namespace Color picker
          string answer = Console.ReadLine().ToLower();
          if (answer == "yes") 
          {
-          Console.WriteLine(" Would youlike to learn Spanish, Russian, Japanese, or Chinese\n");
+          Console.WriteLine(" Would you like to learn Spanish, Russian, Japanese, or Chinese\n");
           answer = Console.ReadLine().ToLower();
           if (answer == "spanish")
           {
