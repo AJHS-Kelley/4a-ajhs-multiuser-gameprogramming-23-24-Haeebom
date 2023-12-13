@@ -4,27 +4,39 @@ using System;
 // Do you want to get paid from learning this language
 // ask the player what they want to do.
 // collect users response in a variable
+// string.StartsWith("x") will check to see if a string starts with that letter, returns true if it does. 
 
+<<<<<<< HEAD
 namespace language 
+=======
+/*
+No for loop. 
+No while loop. 
+Missing parameters for methods. 
+*/ 
+
+
+namespace languagepicker
+>>>>>>> fd2eef215dc181bcd2f85ed00a9ad0004e601052
 {
     class person
     {
-       
+      static string difficulty = "Empty";
       static string language()
        {
          Console.WriteLine("Would you like to learn a language?\n");
          string answer = Console.ReadLine().ToLower();
          if (answer == "yes") 
          {
-          Console.WriteLine(" Would you like to learn Spanish, Russian, Japanese, or Chinese\n");
-          answer = Console.ReadLine().ToLower();
-          if (answer == "spanish")
-          {
-            Console.WriteLine(" You've selected Spanish!\n");
-          }else if (answer == "japanese")
-          {
+            Console.WriteLine(" Would you like to learn Spanish, Russian, Japanese, or Chinese\n");
+            answer = Console.ReadLine().ToLower();
+            if (answer == "spanish")
+            { 
+              Console.WriteLine(" You've selected Spanish!\n");
+              difficulty = "Easy"; 
+            } else if (answer == "japanese") {
            Console.WriteLine("You've selected Japanese \n"); 
-
+            difficulty = "Medium";
           }else if (answer == "russian")
          {
           Console.WriteLine("You've selected Russian\n");
@@ -34,7 +46,7 @@ namespace language
          Console.WriteLine("You've selected Chinese\n");
          }
 
-         } else if (answer == "no")
+         } else if (answer == "no") // answer.ToLower().StartsWith("n"); 
          {
           Console.WriteLine("No language for you !!\n");
          }
