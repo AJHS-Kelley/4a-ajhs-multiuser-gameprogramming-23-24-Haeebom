@@ -5,7 +5,7 @@ using System;
 // ask the player what they want to do.
 // collect users response in a variable
 
-namespace language picker
+namespace language 
 {
     class person
     {
