@@ -39,7 +39,7 @@ class person
          Console.WriteLine("You've selected Russian\n");
          difficulty = "Hard"; 
 
-        }else if (answer == "chinese")answer.ToLower().StartsWith("c"); 
+        }else if (answer == "chinese")answer.ToLower().StartsWith(""); 
         {
           Console.WriteLine("You've selected Chinese\n");
           difficulty = "Hard"; 
