@@ -72,6 +72,12 @@ class person
     }
     static void Main(string[] args)  
     {
+      int i = 0
+    {
+     console.WriteLine(i);
+     i++;
+    }
+    while (i < 5);
 
 
     int time = 0;
